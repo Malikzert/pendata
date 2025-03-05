@@ -24,15 +24,15 @@ import numpy as np
 
 def get_data_mysql():
     conn = pymysql.connect(
-        host="mysql-37a70601-mysqliris.i.aivencloud.com",
+        host="mysql-36e0c60-mysqlmalik.g.aivencloud.com",
         user="avnadmin",
-        password="AVNS_3JRmZQG_Bul1_r-Rhl6",
-        database="petal",
-        port=10378
+        password="AVNS_nDXL4gOogFn3sSgwrBm",
+        database="defaultdb",
+        port=10845
     )
     cursor = conn.cursor()
     # cursor.execute("USE myiris")  # Use the database
-    cursor.execute("SELECT * FROM petaliris")  # Select all records from the table
+    cursor.execute("SELECT * FROM petalmysql")  # Select all records from the table
     data = cursor.fetchall()  # Fetch all rows
 
     conn.close()

@@ -172,6 +172,7 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="tugas1.html">Tugas1 penambangan data</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 2 data_understanding</strong></a></li>
+
 </ul>
 
     </div>
@@ -364,6 +365,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Tugas 2 data_understanding</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-outlier-deteksi"><strong>Penjelasan Outlier Deteksi</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-dengan-k-nearest-neighbors-knn-dalam-data-understanding"><strong>Deteksi Outlier dengan K-Nearest Neighbors (KNN) dalam Data Understanding</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pengantar-outlier-dalam-data-understanding">1. Pengantar Outlier dalam Data Understanding</a></li>
@@ -374,12 +376,32 @@
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><strong>Kesimpulan</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-library-pustaka">Install library(pustaka)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#memuat-dataset-iris-mengonversinya-menjadi-dataframe-pandas-dan-menampilkan-bentuk-serta-isinya">memuat dataset Iris, mengonversinya menjadi DataFrame pandas, dan menampilkan bentuk serta isinya.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#koneksi-dan-analisis">Koneksi dan Analisis</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#koneksi-ke-database-postgresql">Koneksi ke Database PostgreSQL</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#koneksi-ke-database-mysql">Koneksi ke Database MySQL</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-dengan-knn">Deteksi Outlier dengan KNN</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#total-outlier">Total outlier</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-daftar-outlier-yang-terdeteksi">Menampilkan daftar outlier yang terdeteksi</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mengurutkan-data-by-knn">Mengurutkan data by KNN.</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lof">LOF</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-lof">APA ITU LOF?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagaimana-tahapan-lof">BAGAIMANA TAHAPAN LOF?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-menggunakan-sklearn">Implementasi menggunakan Sklearn</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menggunakan-dataset-iris-dari-scikit-learn">Menggunakan dataset Iris dari scikit-learn</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mendeteksi-outlier-dalam-dataset-iris">Mendeteksi outlier dalam dataset Iris.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#memuat-dataset-iris-mengonversinya-menjadi-dataframe-pandas-dan-menampilkan-bentuk-serta-isinya">memuat dataset Iris, mengonversinya menjadi DataFrame pandas, dan menampilkan bentuk serta isinya.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -464,7 +486,9 @@ KNN cocok untuk dataset yang tidak terlalu besar karena kompleksitas komputasiny
 </div>
 </div>
 </div>
-<p>####Koneksi dan Analisis</p>
+</section>
+<section id="koneksi-dan-analisis">
+<h4>Koneksi dan Analisis<a class="headerlink" href="#koneksi-dan-analisis" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Menghubungkan Database</p></li>
 </ul>
@@ -498,8 +522,10 @@ Menghitung Local Outlier Factor (LOF) untuk mendeteksi titik outlier.</p>
 </div>
 </div>
 </div>
-<p>####Koneksi ke Database PostgreSQL
-Menggunakan psycopg2.connect() untuk membuat koneksi ke database PostgreSQL.</p>
+</section>
+<section id="koneksi-ke-database-postgresql">
+<h4>Koneksi ke Database PostgreSQL<a class="headerlink" href="#koneksi-ke-database-postgresql" title="Link to this heading">#</a></h4>
+<p>Menggunakan psycopg2.connect() untuk membuat koneksi ke database PostgreSQL.</p>
 <p>Parameter koneksi:</p>
 <p>host → Alamat server database.</p>
 <p>user → Nama pengguna database.</p>
@@ -528,8 +554,10 @@ Menggunakan psycopg2.connect() untuk membuat koneksi ke database PostgreSQL.</p>
 </div>
 </div>
 </div>
-<p>####Koneksi ke Database MySQL
-Menggunakan pymysql.connect() untuk membuat koneksi ke database MySQL.</p>
+</section>
+<section id="koneksi-ke-database-mysql">
+<h4>Koneksi ke Database MySQL<a class="headerlink" href="#koneksi-ke-database-mysql" title="Link to this heading">#</a></h4>
+<p>Menggunakan pymysql.connect() untuk membuat koneksi ke database MySQL.</p>
 <p>Parameter koneksi:</p>
 <p>host → Alamat server database.</p>
 <p>user → Nama pengguna database.</p>
@@ -558,8 +586,10 @@ Menggunakan pymysql.connect() untuk membuat koneksi ke database MySQL.</p>
 </div>
 </div>
 </div>
-<p>####Deteksi Outlier dengan KNN
-Kode ini bertujuan untuk mengambil data dari PostgreSQL dan MySQL, menggabungkannya, lalu mendeteksi outlier menggunakan metode K-Nearest Neighbors (KNN).</p>
+</section>
+<section id="deteksi-outlier-dengan-knn">
+<h4>Deteksi Outlier dengan KNN<a class="headerlink" href="#deteksi-outlier-dengan-knn" title="Link to this heading">#</a></h4>
+<p>Kode ini bertujuan untuk mengambil data dari PostgreSQL dan MySQL, menggabungkannya, lalu mendeteksi outlier menggunakan metode K-Nearest Neighbors (KNN).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ambil data dari kedua database</span>
@@ -766,8 +796,10 @@ Kode ini bertujuan untuk mengambil data dari PostgreSQL dan MySQL, menggabungkan
 <img alt="_images/2bd841a2225a1bf9e623ef0800141d23cb360bb13b9cde07ecc7290d360c7365.png" src="_images/2bd841a2225a1bf9e623ef0800141d23cb360bb13b9cde07ecc7290d360c7365.png" />
 </div>
 </div>
-<p>####Total outlier
-Kode berikut digunakan untuk menghitung total jumlah outlier yang terdeteksi dalam dataset</p>
+</section>
+<section id="total-outlier">
+<h4>Total outlier<a class="headerlink" href="#total-outlier" title="Link to this heading">#</a></h4>
+<p>Kode berikut digunakan untuk menghitung total jumlah outlier yang terdeteksi dalam dataset</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hitung total outlier</span>
@@ -782,7 +814,9 @@ Kode berikut digunakan untuk menghitung total jumlah outlier yang terdeteksi dal
 </div>
 </div>
 </div>
-<p>####Menampilkan daftar outlier yang terdeteksi</p>
+</section>
+<section id="menampilkan-daftar-outlier-yang-terdeteksi">
+<h4>Menampilkan daftar outlier yang terdeteksi<a class="headerlink" href="#menampilkan-daftar-outlier-yang-terdeteksi" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">outliers</span> <span class="o">=</span> <span class="n">df_merged</span><span class="p">[</span><span class="n">df_merged</span><span class="p">[</span><span class="s2">&quot;outlier&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;knn_distance&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -806,7 +840,9 @@ Kode berikut digunakan untuk menghitung total jumlah outlier yang terdeteksi dal
 </div>
 </div>
 </div>
-<p>####Mengurutkan data by KNN.</p>
+</section>
+<section id="mengurutkan-data-by-knn">
+<h4>Mengurutkan data by KNN.<a class="headerlink" href="#mengurutkan-data-by-knn" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Urutkan data berdasarkan jarak dari terkecil ke terbesar</span>
@@ -974,10 +1010,18 @@ Kode berikut digunakan untuk menghitung total jumlah outlier yang terdeteksi dal
 </div>
 </div>
 </div>
-<p>#LOF
-##APA ITU LOF?
-Algoritme Faktor Outlier Lokal (LOF) adalah metode deteksi anomali tanpa pengawasan yang menghitung deviasi kerapatan lokal dari titik data tertentu terhadap tetangganya. Algoritme ini menganggap sampel yang memiliki kerapatan jauh lebih rendah daripada tetangganya sebagai outlier. Contoh ini menunjukkan cara menggunakan LOF untuk deteksi outlier yang merupakan kasus penggunaan default dari estimator ini di scikit-learn.</p>
-<p>##BAGAIMANA TAHAPAN LOF?</p>
+</section>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="lof">
+<h1>LOF<a class="headerlink" href="#lof" title="Link to this heading">#</a></h1>
+<section id="apa-itu-lof">
+<h2>APA ITU LOF?<a class="headerlink" href="#apa-itu-lof" title="Link to this heading">#</a></h2>
+<p>Algoritme Faktor Outlier Lokal (LOF) adalah metode deteksi anomali tanpa pengawasan yang menghitung deviasi kerapatan lokal dari titik data tertentu terhadap tetangganya. Algoritme ini menganggap sampel yang memiliki kerapatan jauh lebih rendah daripada tetangganya sebagai outlier. Contoh ini menunjukkan cara menggunakan LOF untuk deteksi outlier yang merupakan kasus penggunaan default dari estimator ini di scikit-learn.</p>
+</section>
+<section id="bagaimana-tahapan-lof">
+<h2>BAGAIMANA TAHAPAN LOF?<a class="headerlink" href="#bagaimana-tahapan-lof" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Tentukan K-Tetangga Terdekat (k-nearest neighbors)
 Setiap titik data dihitung jaraknya ke sejumlah tetangga terdekatnya (misalnya 5 atau 10 tetangga).</p></li>
@@ -1054,7 +1098,9 @@ $<span class="math notranslate nohighlight">\(
 <p>Jika LOF ≈ 1, berarti titik tersebut normal.
 Jika LOF &gt; 1, berarti titik tersebut outlier.
 LOF(D) ≈ 5.8, artinya titik D adalah outlier!</p>
-<p>##Implementasi menggunakan Sklearn</p>
+</section>
+<section id="implementasi-menggunakan-sklearn">
+<h2>Implementasi menggunakan Sklearn<a class="headerlink" href="#implementasi-menggunakan-sklearn" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1146,7 +1192,8 @@ LOF(D) ≈ 5.8, artinya titik D adalah outlier!</p>
 <img alt="_images/2bd841a2225a1bf9e623ef0800141d23cb360bb13b9cde07ecc7290d360c7365.png" src="_images/2bd841a2225a1bf9e623ef0800141d23cb360bb13b9cde07ecc7290d360c7365.png" />
 </div>
 </div>
-<p>####Menggunakan dataset Iris dari scikit-learn</p>
+<section id="menggunakan-dataset-iris-dari-scikit-learn">
+<h3>Menggunakan dataset Iris dari scikit-learn<a class="headerlink" href="#menggunakan-dataset-iris-dari-scikit-learn" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
@@ -1179,7 +1226,9 @@ LOF(D) ≈ 5.8, artinya titik D adalah outlier!</p>
 </div>
 </div>
 </div>
-<p>####Mendeteksi outlier dalam dataset Iris.</p>
+</section>
+<section id="mendeteksi-outlier-dalam-dataset-iris">
+<h3>Mendeteksi outlier dalam dataset Iris.<a class="headerlink" href="#mendeteksi-outlier-dalam-dataset-iris" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1225,7 +1274,7 @@ LOF(D) ≈ 5.8, artinya titik D adalah outlier!</p>
 </div>
 </section>
 <section id="memuat-dataset-iris-mengonversinya-menjadi-dataframe-pandas-dan-menampilkan-bentuk-serta-isinya">
-<h4>memuat dataset Iris, mengonversinya menjadi DataFrame pandas, dan menampilkan bentuk serta isinya.<a class="headerlink" href="#memuat-dataset-iris-mengonversinya-menjadi-dataframe-pandas-dan-menampilkan-bentuk-serta-isinya" title="Link to this heading">#</a></h4>
+<h3>memuat dataset Iris, mengonversinya menjadi DataFrame pandas, dan menampilkan bentuk serta isinya.<a class="headerlink" href="#memuat-dataset-iris-mengonversinya-menjadi-dataframe-pandas-dan-menampilkan-bentuk-serta-isinya" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
@@ -1269,89 +1318,6 @@ LOF(D) ≈ 5.8, artinya titik D adalah outlier!</p>
 </div>
 </div>
 </div>
-<p>####Deteksi Outlier Menggunakan Local Outlier Factor (LOF) di Sklearn</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span>  <span class="n">LocalOutlierFactor</span>
-<span class="c1"># Deteksi outlier dengan Local Outlier Factor (LOF)</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">LocalOutlierFactor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">contamination</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">data_values</span><span class="p">)</span>
-
-<span class="c1"># Tambahkan hasil prediksi ke DataFrame</span>
-<span class="n">df_merged</span><span class="p">[</span><span class="s2">&quot;outlier_label&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_pred</span>
-
-<span class="c1"># Filter data dengan outlier (-1) dan tampilkan kolom yang diminta</span>
-<span class="n">outlier_data</span> <span class="o">=</span> <span class="n">df_merged</span><span class="p">[</span><span class="n">df_merged</span><span class="p">[</span><span class="s2">&quot;outlier_label&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">][[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;petal_length&quot;</span><span class="p">,</span> <span class="s2">&quot;petal_width&quot;</span><span class="p">,</span> <span class="s2">&quot;sepal_length&quot;</span><span class="p">,</span> <span class="s2">&quot;sepal_width&quot;</span><span class="p">]]</span>
-
-<span class="c1"># Cetak data outlier</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data Outlier (-1):&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">outlier_data</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">data_values</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Tambahkan hasil prediksi ke DataFrame</span>
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">df_merged</span><span class="p">[</span><span class="s2">&quot;outlier_label&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_pred</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># Filter data dengan outlier (-1) dan tampilkan kolom yang diminta</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">outlier_data</span> <span class="o">=</span> <span class="n">df_merged</span><span class="p">[</span><span class="n">df_merged</span><span class="p">[</span><span class="s2">&quot;outlier_label&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">][[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;petal_length&quot;</span><span class="p">,</span> <span class="s2">&quot;petal_width&quot;</span><span class="p">,</span> <span class="s2">&quot;sepal_length&quot;</span><span class="p">,</span> <span class="s2">&quot;sepal_width&quot;</span><span class="p">]]</span>
-
-<span class="nn">File ~/.local/lib/python3.12/site-packages/pandas/core/frame.py:4311,</span> in <span class="ni">DataFrame.__setitem__</span><span class="nt">(self, key, value)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4308</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_setitem_array</span><span class="p">([</span><span class="n">key</span><span class="p">],</span> <span class="n">value</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4309</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">4310</span>     <span class="c1"># set column</span>
-<span class="ne">-&gt; </span><span class="mi">4311</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_set_item</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-
-<span class="nn">File ~/.local/lib/python3.12/site-packages/pandas/core/frame.py:4524,</span> in <span class="ni">DataFrame._set_item</span><span class="nt">(self, key, value)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4514</span> <span class="k">def</span> <span class="nf">_set_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">4515</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">4516</span><span class="sd">     Add series to DataFrame in specified column.</span>
-<span class="g g-Whitespace">   </span><span class="mi">4517</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4522</span><span class="sd">     ensure homogeneity.</span>
-<span class="g g-Whitespace">   </span><span class="mi">4523</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">4524</span>     <span class="n">value</span><span class="p">,</span> <span class="n">refs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sanitize_column</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4526</span>     <span class="k">if</span> <span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">4527</span>         <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span>
-<span class="g g-Whitespace">   </span><span class="mi">4528</span>         <span class="ow">and</span> <span class="n">value</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span>
-<span class="g g-Whitespace">   </span><span class="mi">4529</span>         <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">ExtensionDtype</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4530</span>     <span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">4531</span>         <span class="c1"># broadcast across multiple columns if necessary</span>
-<span class="g g-Whitespace">   </span><span class="mi">4532</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">is_unique</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">MultiIndex</span><span class="p">):</span>
-
-<span class="nn">File ~/.local/lib/python3.12/site-packages/pandas/core/frame.py:5266,</span> in <span class="ni">DataFrame._sanitize_column</span><span class="nt">(self, value)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5263</span>     <span class="k">return</span> <span class="n">_reindex_for_setitem</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5265</span> <span class="k">if</span> <span class="n">is_list_like</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">5266</span>     <span class="n">com</span><span class="o">.</span><span class="n">require_length_match</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5267</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">sanitize_array</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">allow_2d</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5268</span> <span class="k">if</span> <span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">5269</span>     <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Index</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5270</span>     <span class="ow">and</span> <span class="n">value</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="s2">&quot;object&quot;</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5273</span>     <span class="c1"># TODO: Remove kludge in sanitize_array for string mode when enforcing</span>
-<span class="g g-Whitespace">   </span><span class="mi">5274</span>     <span class="c1"># this deprecation</span>
-
-<span class="nn">File ~/.local/lib/python3.12/site-packages/pandas/core/common.py:573,</span> in <span class="ni">require_length_match</span><span class="nt">(data, index)</span>
-<span class="g g-Whitespace">    </span><span class="mi">569</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">570</span><span class="sd"> Check the length of data matches the length of the index.</span>
-<span class="g g-Whitespace">    </span><span class="mi">571</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">572</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">573</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">574</span>         <span class="s2">&quot;Length of values &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">575</span>         <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2">) &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">576</span>         <span class="s2">&quot;does not match length of index &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">577</span>         <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">index</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">578</span>     <span class="p">)</span>
-
-<span class="ne">ValueError</span>: Length of values (151) does not match length of index (150)
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 </section>
 </section>
@@ -1412,6 +1378,7 @@ LOF(D) ≈ 5.8, artinya titik D adalah outlier!</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Tugas 2 data_understanding</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-outlier-deteksi"><strong>Penjelasan Outlier Deteksi</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-dengan-k-nearest-neighbors-knn-dalam-data-understanding"><strong>Deteksi Outlier dengan K-Nearest Neighbors (KNN) dalam Data Understanding</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pengantar-outlier-dalam-data-understanding">1. Pengantar Outlier dalam Data Understanding</a></li>
@@ -1422,12 +1389,32 @@ LOF(D) ≈ 5.8, artinya titik D adalah outlier!</p>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><strong>Kesimpulan</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-library-pustaka">Install library(pustaka)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#memuat-dataset-iris-mengonversinya-menjadi-dataframe-pandas-dan-menampilkan-bentuk-serta-isinya">memuat dataset Iris, mengonversinya menjadi DataFrame pandas, dan menampilkan bentuk serta isinya.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#koneksi-dan-analisis">Koneksi dan Analisis</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#koneksi-ke-database-postgresql">Koneksi ke Database PostgreSQL</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#koneksi-ke-database-mysql">Koneksi ke Database MySQL</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-dengan-knn">Deteksi Outlier dengan KNN</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#total-outlier">Total outlier</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-daftar-outlier-yang-terdeteksi">Menampilkan daftar outlier yang terdeteksi</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mengurutkan-data-by-knn">Mengurutkan data by KNN.</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lof">LOF</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-lof">APA ITU LOF?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagaimana-tahapan-lof">BAGAIMANA TAHAPAN LOF?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-menggunakan-sklearn">Implementasi menggunakan Sklearn</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menggunakan-dataset-iris-dari-scikit-learn">Menggunakan dataset Iris dari scikit-learn</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mendeteksi-outlier-dalam-dataset-iris">Mendeteksi outlier dalam dataset Iris.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#memuat-dataset-iris-mengonversinya-menjadi-dataframe-pandas-dan-menampilkan-bentuk-serta-isinya">memuat dataset Iris, mengonversinya menjadi DataFrame pandas, dan menampilkan bentuk serta isinya.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>

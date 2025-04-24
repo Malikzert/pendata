@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Import dataset &#8212; PENAMBANGAN DATA E</title>
+    <title>Proyek UTS Pendata &#8212; PENAMBANGAN DATA E</title>
   
   
   
@@ -173,11 +173,7 @@
 <li class="toctree-l2"><a class="reference internal" href="lof.html">LOF</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Import dataset</a></li>
-
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Proyek UTS Pendata</a></li>
 </ul>
 
     </div>
@@ -360,7 +356,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Import dataset</h1>
+    <h1>Proyek UTS Pendata</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -370,13 +366,12 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Import dataset</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-data-dan-visualisasi-serta-korelasi-fitur-dalam-dataset-data-understanding">1. Analisis Data dan Visualisasi Serta Korelasi Fitur dalam Dataset (DATA UNDERSTANDING)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pemrosesan-awal-data-preprocessing">2. Pemrosesan awal data (Preprocessing)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-model-klasifikasi">3. Pemodelan (model klasifikasi)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi">Evaluasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-dataset">Import dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-data-dan-visualisasi-serta-korelasi-fitur-dalam-dataset-data-understanding">1. Analisis Data dan Visualisasi Serta Korelasi Fitur dalam Dataset (DATA UNDERSTANDING)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemrosesan-awal-data-preprocessing">2. Pemrosesan awal data (Preprocessing)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-model-klasifikasi">3. Pemodelan (model klasifikasi)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi">Evaluasi</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -387,7 +382,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>#Proyek UTS Pendata</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="proyek-uts-pendata">
+<h1>Proyek UTS Pendata<a class="headerlink" href="#proyek-uts-pendata" title="Link to this heading">#</a></h1>
 <p>##Install Pustaka
 pip install ucimlrepo digunakan untuk menginstal pustaka Python bernama ucimlrepo dari Python Package Index (PyPI). Pustaka ini memungkinkan kita untuk mengakses dataset dari UCI Machine Learning Repository secara langsung lewat kode Python, tanpa perlu mengunduh file secara manual.</p>
 <div class="cell docutils container">
@@ -397,24 +393,14 @@ pip install ucimlrepo digunakan untuk menginstal pustaka Python bernama ucimlrep
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting ucimlrepo
-  Downloading ucimlrepo-0.0.7-py3-none-any.whl.metadata (5.5 kB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ucimlrepo in /usr/local/python/3.12.1/lib/python3.12/site-packages (0.0.7)
 Requirement already satisfied: pandas&gt;=1.0.0 in /home/codespace/.local/lib/python3.12/site-packages (from ucimlrepo) (2.2.3)
 Requirement already satisfied: certifi&gt;=2020.12.5 in /home/codespace/.local/lib/python3.12/site-packages (from ucimlrepo) (2024.8.30)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&gt;=1.26.0 in /home/codespace/.local/lib/python3.12/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.2.0)
+Requirement already satisfied: numpy&gt;=1.26.0 in /home/codespace/.local/lib/python3.12/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.2.0)
 Requirement already satisfied: python-dateutil&gt;=2.8.2 in /home/codespace/.local/lib/python3.12/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.9.0.post0)
 Requirement already satisfied: pytz&gt;=2020.1 in /home/codespace/.local/lib/python3.12/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2024.2)
 Requirement already satisfied: tzdata&gt;=2022.7 in /home/codespace/.local/lib/python3.12/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2024.2)
 Requirement already satisfied: six&gt;=1.5 in /home/codespace/.local/lib/python3.12/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.0.0-&gt;ucimlrepo) (1.17.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading ucimlrepo-0.0.7-py3-none-any.whl (8.0 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: ucimlrepo
-Successfully installed ucimlrepo-0.0.7
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
@@ -423,7 +409,7 @@ Successfully installed ucimlrepo-0.0.7
 </div>
 </div>
 <section id="import-dataset">
-<h1>Import dataset<a class="headerlink" href="#import-dataset" title="Link to this heading">#</a></h1>
+<h2>Import dataset<a class="headerlink" href="#import-dataset" title="Link to this heading">#</a></h2>
 <p>Import dataset digunakan untuk mengambil data yang ada pada repository atau dataset yang dipublikasi yang akan digunakan untuk menganalisis datanya.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -495,7 +481,7 @@ Successfully installed ucimlrepo-0.0.7
 </div>
 </section>
 <section id="analisis-data-dan-visualisasi-serta-korelasi-fitur-dalam-dataset-data-understanding">
-<h1>1. Analisis Data dan Visualisasi Serta Korelasi Fitur dalam Dataset (DATA UNDERSTANDING)<a class="headerlink" href="#analisis-data-dan-visualisasi-serta-korelasi-fitur-dalam-dataset-data-understanding" title="Link to this heading">#</a></h1>
+<h2>1. Analisis Data dan Visualisasi Serta Korelasi Fitur dalam Dataset (DATA UNDERSTANDING)<a class="headerlink" href="#analisis-data-dan-visualisasi-serta-korelasi-fitur-dalam-dataset-data-understanding" title="Link to this heading">#</a></h2>
 <p>data Teratas: Menampilkan lima baris pertama dataset yang membantu untuk melihat gambaran umum data dan memeriksa apakah ada masalah atau keanehan dalam pengambilan data.</p>
 <p>Struktur Data: Dengan fungsi info(), kita mendapatkan gambaran tentang jumlah kolom, tipe data, serta jumlah data non-null pada setiap kolom. Ini penting untuk memastikan bahwa dataset terstruktur dengan benar.</p>
 <p>Statistik Deskriptif: Fungsi describe() memberikan statistik dasar dari data numerik, seperti rata-rata, standar deviasi, nilai minimum dan maksimum, serta kuartil. Statistik deskriptif ini membantu dalam memahami distribusi dan variabilitas data.</p>
@@ -827,7 +813,7 @@ Name: count, dtype: int64
 </div>
 </section>
 <section id="pemrosesan-awal-data-preprocessing">
-<h1>2. Pemrosesan awal data (Preprocessing)<a class="headerlink" href="#pemrosesan-awal-data-preprocessing" title="Link to this heading">#</a></h1>
+<h2>2. Pemrosesan awal data (Preprocessing)<a class="headerlink" href="#pemrosesan-awal-data-preprocessing" title="Link to this heading">#</a></h2>
 <p>Kode di bawah melakukan serangkaian tahapan preprocessing data untuk dataset pasien sirosis hati. Pertama, data numerik dan kategorikal dipisahkan untuk memudahkan imputasi nilai yang hilang.</p>
 <p>Kolom numerik diimputasi menggunakan rata-rata (mean), sementara kolom kategorikal diimputasi menggunakan nilai yang paling sering muncul (most_frequent). Setelah itu, kolom numerik dan kategorikal yang telah diimputasi digabungkan kembali. Selanjutnya, kolom kategorikal diubah menjadi variabel biner (one-hot encoding) menggunakan pd.get_dummies(). Fitur numerik kemudian distandarisasi dengan menggunakan StandardScaler untuk memastikan bahwa setiap fitur memiliki skala yang sama. Terakhir, data dipisahkan menjadi data pelatihan dan pengujian (80:20) dengan menggunakan train_test_split. Hasil akhir dari preprocessing ini adalah data yang siap digunakan untuk analisis atau pelatihan model, dengan ukuran data pelatihan dan pengujian yang ditampilkan pada output.</p>
 <div class="cell docutils container">
@@ -940,9 +926,7 @@ Setelah penggabungan kolom numerik dan kategorikal:
 4            72       136  
 
 Setelah encoding kolom kategorikal:
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       Age  Bilirubin  Albumin  Alk_Phos    SGOT  Prothrombin  Stage  \
+       Age  Bilirubin  Albumin  Alk_Phos    SGOT  Prothrombin  Stage  \
 0  21464.0       14.5     2.60    1718.0  137.95         12.2    4.0   
 1  20617.0        1.1     4.14    7394.8  113.52         10.6    3.0   
 2  25594.0        1.4     3.48     516.0   96.10         12.0    4.0   
@@ -1002,8 +986,9 @@ Setelah scaling fitur numerik:
 4      -0.04897     -0.069338      -0.04897       -0.098295  
 
 [5 rows x 776 columns]
-
-Data setelah preprocessing:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data setelah preprocessing:
 Shape data training: (334, 776)
 Shape data testing: (84, 776)
 </pre></div>
@@ -1058,7 +1043,7 @@ Shape data testing: (84, 776)
 </div>
 </section>
 <section id="pemodelan-model-klasifikasi">
-<h1>3. Pemodelan (model klasifikasi)<a class="headerlink" href="#pemodelan-model-klasifikasi" title="Link to this heading">#</a></h1>
+<h2>3. Pemodelan (model klasifikasi)<a class="headerlink" href="#pemodelan-model-klasifikasi" title="Link to this heading">#</a></h2>
 <p>Pada tahap pemodelan, dua algoritma klasifikasi digunakan yaitu <strong>Logistic Regression</strong> dan <strong>Random Forest</strong>. Logistic Regression digunakan sebagai baseline model karena sederhana dan efektif untuk interpretasi awal. Model ini dilatih menggunakan data training yang telah dipreproses, kemudian dilakukan prediksi terhadap data testing. Hasil evaluasi menunjukkan akurasi sekitar 64%, namun model ini kurang mampu memprediksi kelas minoritas seperti ‘CL’, ditunjukkan dengan nilai precision dan recall yang nol.</p>
 <p>Sebaliknya, model <strong>Random Forest</strong> menunjukkan performa lebih baik dengan akurasi mencapai 75%. Model ini mampu menangani kompleksitas data dan menghasilkan prediksi yang lebih seimbang antar kelas dibandingkan Logistic Regression. Meskipun kelas ‘CL’ tetap sulit diprediksi karena data yang tidak seimbang, Random Forest memberikan nilai f1-score dan recall yang lebih tinggi untuk kelas ‘C’ dan ‘D’, menunjukkan kemampuannya menangkap pola yang lebih kompleks dalam data.</p>
 <div class="cell docutils container">
@@ -1115,9 +1100,9 @@ Classification Report:
     accuracy                           0.64        84
    macro avg       0.45      0.44      0.44        84
 weighted avg       0.64      0.64      0.64        84
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model Random Forest:
+
+
+Model Random Forest:
 Accuracy: 0.75
 
 Classification Report:
@@ -1166,7 +1151,7 @@ weighted avg       0.71      0.75      0.73        84
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_6727/964948345.py:13: FutureWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_11130/964948345.py:13: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `y` variable to `hue` and set `legend=False` for the same effect.
 
@@ -1178,7 +1163,7 @@ Passing `palette` without assigning `hue` is deprecated and will be removed in v
 </div>
 </section>
 <section id="evaluasi">
-<h1>Evaluasi<a class="headerlink" href="#evaluasi" title="Link to this heading">#</a></h1>
+<h2>Evaluasi<a class="headerlink" href="#evaluasi" title="Link to this heading">#</a></h2>
 <p>Pada tahapan evaluasi ini, dua model klasifikasi yaitu Logistic Regression dan Random Forest digunakan untuk memprediksi kelangsungan hidup pasien sirosis berdasarkan data yang telah melalui tahap praproses. Model Logistic Regression merupakan metode linier yang bekerja dengan baik pada data yang memiliki hubungan linear antar fitur. Model ini dilatih menggunakan data training dan diuji menggunakan data testing, menghasilkan nilai akurasi dan metrik evaluasi lainnya seperti precision, recall, dan f1-score yang diperoleh melalui classification_report. Hasil evaluasi ini memberikan gambaran awal sejauh mana model dapat membedakan antara kelas-kelas yang ada pada data target.</p>
 <p>Sementara itu, Random Forest adalah metode ensemble berbasis pohon keputusan yang cenderung lebih kuat dalam menangani data yang kompleks dan non-linear. Dengan menggunakan beberapa pohon keputusan secara bersamaan, Random Forest dapat meningkatkan akurasi dan mengurangi risiko overfitting. Setelah model ini dilatih, hasil prediksi dievaluasi dengan cara yang sama seperti Logistic Regression. Melalui perbandingan akurasi dan metrik-metrik lainnya, dapat dilihat model mana yang memberikan performa terbaik dalam klasifikasi kelangsungan hidup pasien. Evaluasi ini sangat penting untuk menentukan model yang paling layak digunakan pada implementasi nyata.</p>
 <div class="cell docutils container">
@@ -1267,6 +1252,7 @@ weighted avg       0.71      0.75      0.73        84
 </div>
 </div>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1324,13 +1310,12 @@ weighted avg       0.71      0.75      0.73        84
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Import dataset</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-data-dan-visualisasi-serta-korelasi-fitur-dalam-dataset-data-understanding">1. Analisis Data dan Visualisasi Serta Korelasi Fitur dalam Dataset (DATA UNDERSTANDING)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pemrosesan-awal-data-preprocessing">2. Pemrosesan awal data (Preprocessing)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-model-klasifikasi">3. Pemodelan (model klasifikasi)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi">Evaluasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-dataset">Import dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-data-dan-visualisasi-serta-korelasi-fitur-dalam-dataset-data-understanding">1. Analisis Data dan Visualisasi Serta Korelasi Fitur dalam Dataset (DATA UNDERSTANDING)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemrosesan-awal-data-preprocessing">2. Pemrosesan awal data (Preprocessing)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-model-klasifikasi">3. Pemodelan (model klasifikasi)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi">Evaluasi</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

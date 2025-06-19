@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tugas Pra Uas (Hepatitis) &#8212; PENAMBANGAN DATA E</title>
+    <title>Prediksi Hepatitis C Berdasarkan Data Pasien Mesir dengan Berbagai Metode Diskritisasi &#8212; PENAMBANGAN DATA E</title>
   
   
   
@@ -178,7 +178,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Fuzzy_CMeans.html"><strong>FUZZY C-MEANS CLUSTERING</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="tree.html">Decision tree</a></li>
 <li class="toctree-l1"><a class="reference internal" href="binnings.html">Teknik Binning</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas Pra Uas (Hepatitis)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prediksi Hepatitis C Berdasarkan Data Pasien Mesir dengan Berbagai Metode Diskritisasi</a></li>
 </ul>
 
     </div>
@@ -361,7 +361,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas Pra Uas (Hepatitis)</h1>
+    <h1>Prediksi Hepatitis C Berdasarkan Data Pasien Mesir dengan Berbagai Metode Diskritisasi</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -371,7 +371,10 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapkan-dataset">1. Persiapkan Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapkan-dataset">1. Persiapkan Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sumber-dataset">Sumber Dataset</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-understanding">2. Data Understanding</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-penjelasan-fitur-variabel-data">a. Penjelasan fitur / variabel data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-ekplorasi-data-tersebut">b.	Ekplorasi data tersebut</a></li>
@@ -398,11 +401,14 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-pra-uas-hepatitis">
-<h1>Tugas Pra Uas (Hepatitis)<a class="headerlink" href="#tugas-pra-uas-hepatitis" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="prediksi-hepatitis-c-berdasarkan-data-pasien-mesir-dengan-berbagai-metode-diskritisasi">
+<h1>Prediksi Hepatitis C Berdasarkan Data Pasien Mesir dengan Berbagai Metode Diskritisasi<a class="headerlink" href="#prediksi-hepatitis-c-berdasarkan-data-pasien-mesir-dengan-berbagai-metode-diskritisasi" title="Link to this heading">#</a></h1>
 <section id="persiapkan-dataset">
 <h2>1. Persiapkan Dataset<a class="headerlink" href="#persiapkan-dataset" title="Link to this heading">#</a></h2>
 <p>Langkah awal mengambil dataset “Hepatitis C Virus (HCV) for Egyptian Patients” dari UCI Machine Learning Repository menggunakan pustaka ucimlrepo. Setelah dataset di-fetch, data fitur (X) dan data target/label (y) diekstraksi dalam bentuk DataFrame. Selain itu, kode juga menampilkan informasi metadata dari dataset (seperti nama dataset, sumber, jumlah fitur, dll.) serta rincian masing-masing variabel (nama fitur, tipe data, deskripsi, dan apakah mengandung nilai yang hilang). Hal ini penting sebagai bagian dari proses data understanding untuk mengenali struktur dan karakteristik data sebelum dilakukan analisis atau pemodelan lebih lanjut.</p>
+<section id="sumber-dataset">
+<h3>Sumber Dataset<a class="headerlink" href="#sumber-dataset" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://archive.ics.uci.edu/dataset/503/hepatitis+c+virus+hcv+for+egyptian+patients">https://archive.ics.uci.edu/dataset/503/hepatitis+c+virus+hcv+for+egyptian+patients</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>ucimlrepo
@@ -412,14 +418,16 @@
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ucimlrepo in /home/codespace/.python/current/lib/python3.12/site-packages (0.0.7)
 Requirement already satisfied: pandas&gt;=1.0.0 in /home/codespace/.local/lib/python3.12/site-packages (from ucimlrepo) (2.2.3)
-Requirement already satisfied: certifi&gt;=2020.12.5 in /home/codespace/.local/lib/python3.12/site-packages (from ucimlrepo) (2024.8.30)
-Requirement already satisfied: numpy&gt;=1.26.0 in /home/codespace/.local/lib/python3.12/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: certifi&gt;=2020.12.5 in /home/codespace/.local/lib/python3.12/site-packages (from ucimlrepo) (2024.8.30)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&gt;=1.26.0 in /home/codespace/.local/lib/python3.12/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.2.0)
 Requirement already satisfied: python-dateutil&gt;=2.8.2 in /home/codespace/.local/lib/python3.12/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.9.0.post0)
 Requirement already satisfied: pytz&gt;=2020.1 in /home/codespace/.local/lib/python3.12/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2024.2)
 Requirement already satisfied: tzdata&gt;=2022.7 in /home/codespace/.local/lib/python3.12/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2024.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.5 in /home/codespace/.local/lib/python3.12/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.0.0-&gt;ucimlrepo) (1.17.0)
+Requirement already satisfied: six&gt;=1.5 in /home/codespace/.local/lib/python3.12/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.0.0-&gt;ucimlrepo) (1.17.0)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">25.0.1</span> -&gt; <span class=" -Color -Color-Green">25.1.1</span>
@@ -430,90 +438,162 @@ Requirement already satisfied: tzdata&gt;=2022.7 in /home/codespace/.local/lib/p
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ucimlrepo</span> <span class="kn">import</span> <span class="n">fetch_ucirepo</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">ucimlrepo</span> <span class="kn">import</span> <span class="n">fetch_ucirepo</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span>
 
-<span class="c1"># fetch dataset</span>
-<span class="n">hepatitis_c_virus_hcv_for_egyptian_patients</span> <span class="o">=</span> <span class="n">fetch_ucirepo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">503</span><span class="p">)</span>
+<span class="c1"># Fetch dataset HCV</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">fetch_ucirepo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">503</span><span class="p">)</span>
 
-<span class="c1"># data (as pandas dataframes)</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">hepatitis_c_virus_hcv_for_egyptian_patients</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">features</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">hepatitis_c_virus_hcv_for_egyptian_patients</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">targets</span>
+<span class="c1"># Pisahkan fitur dan target</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">features</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">targets</span>
 
-<span class="c1"># metadata</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hepatitis_c_virus_hcv_for_egyptian_patients</span><span class="o">.</span><span class="n">metadata</span><span class="p">)</span>
+<span class="c1"># Gabungkan fitur dan target jadi 1 dataframe</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># variable information</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hepatitis_c_virus_hcv_for_egyptian_patients</span><span class="o">.</span><span class="n">variables</span><span class="p">)</span>
+<span class="c1"># Tentukan target yang ingin diprediksi (contoh: Baselinehistological staging)</span>
+<span class="c1"># Pastikan target bersifat kategorikal</span>
+<span class="n">target_col</span> <span class="o">=</span> <span class="s1">&#39;Baselinehistological staging&#39;</span>
+
+<span class="c1"># Buang baris yang memiliki missing value</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="n">target_col</span><span class="p">])</span>  <span class="c1"># pastikan target tidak null</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>  <span class="c1"># drop seluruh missing value agar training lancar</span>
+
+<span class="c1"># Pisahkan kembali fitur dan label</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">target_col</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span>
+
+<span class="c1"># Encode label jika bertipe kategori non-numerik (jika perlu)</span>
+<span class="k">if</span> <span class="n">y</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="s1">&#39;object&#39;</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Bagi data menjadi latih dan uji</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+<span class="p">)</span>
+
+<span class="c1"># Buat dan latih model Random Forest</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Prediksi</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Evaluasi hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Evaluasi Model Random Forest ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Akurasi      :&quot;</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Presisi      :&quot;</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;weighted&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recall       :&quot;</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;weighted&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;F1 Score     :&quot;</span><span class="p">,</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;weighted&#39;</span><span class="p">))</span>
+
+<span class="c1"># Cetak sebagian data</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Contoh X Train ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Contoh X Test ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Y Test Asli ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_test</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Y Prediksi ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">y_pred</span><span class="p">[:</span><span class="mi">5</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;uci_id&#39;: 503, &#39;name&#39;: &#39;Hepatitis C Virus (HCV) for Egyptian patients&#39;, &#39;repository_url&#39;: &#39;https://archive.ics.uci.edu/dataset/503/hepatitis+c+virus+hcv+for+egyptian+patients&#39;, &#39;data_url&#39;: &#39;https://archive.ics.uci.edu/static/public/503/data.csv&#39;, &#39;abstract&#39;: &#39;Egyptian patients who underwent treatment dosages for HCV about 18 months. Discretization should be applied based on expert recommendations; there is an attached file shows how.&#39;, &#39;area&#39;: &#39;Health and Medicine&#39;, &#39;tasks&#39;: [&#39;Classification&#39;], &#39;characteristics&#39;: [&#39;Multivariate&#39;], &#39;num_instances&#39;: 1385, &#39;num_features&#39;: 28, &#39;feature_types&#39;: [&#39;Real&#39;], &#39;demographics&#39;: [&#39;Age&#39;, &#39;Gender&#39;], &#39;target_col&#39;: [&#39;Baselinehistological staging&#39;], &#39;index_col&#39;: None, &#39;has_missing_values&#39;: &#39;no&#39;, &#39;missing_values_symbol&#39;: None, &#39;year_of_dataset_creation&#39;: 2017, &#39;last_updated&#39;: &#39;Tue Apr 09 2024&#39;, &#39;dataset_doi&#39;: &#39;10.24432/C5989V&#39;, &#39;creators&#39;: [&#39;Sanaa Kamal&#39;, &#39;Mohamed ElEleimy&#39;, &#39;Doaa Hegazy&#39;, &#39;Mahmoud Nasr&#39;], &#39;intro_paper&#39;: {&#39;ID&#39;: 232, &#39;type&#39;: &#39;NATIVE&#39;, &#39;title&#39;: &#39;A novel model based on non invasive methods for prediction of liver fibrosis&#39;, &#39;authors&#39;: &#39;Mahmoud Nasr, Khaled El-Bahnasy, M. Hamdy, S. Kamal&#39;, &#39;venue&#39;: &#39;International Computer Engineering Conference&#39;, &#39;year&#39;: 2017, &#39;journal&#39;: None, &#39;DOI&#39;: None, &#39;URL&#39;: &#39;https://www.semanticscholar.org/paper/A-novel-model-based-on-non-invasive-methods-for-of-Nasr-El-Bahnasy/b2ba7e8525c5c00b5f95166aedd8c19278516bea&#39;, &#39;sha&#39;: None, &#39;corpus&#39;: None, &#39;arxiv&#39;: None, &#39;mag&#39;: None, &#39;acl&#39;: None, &#39;pmid&#39;: None, &#39;pmcid&#39;: None}, &#39;additional_info&#39;: {&#39;summary&#39;: None, &#39;purpose&#39;: None, &#39;funded_by&#39;: None, &#39;instances_represent&#39;: None, &#39;recommended_data_splits&#39;: None, &#39;sensitive_data&#39;: None, &#39;preprocessing_description&#39;: None, &#39;variable_info&#39;: &#39;Age\tAge\r\nGender\tGender\r\nBMI\tBody Mass Index\r\nFever\tFever\r\nNausea/Vomting\tNausea/Vomting\r\nHeadache\tHeadache\r\nDiarrhea\tDiarrhea\r\nFatigue &amp; generalized bone ache\tFatigue &amp; generalized bone ache\r\nJaundice\tJaundice\r\nEpigastric pain\tEpigastric pain\r\nWBC\tWhite blood cell\r\nRBC\tred blood cells\r\nHGB\tHemoglobin\r\nPlat\tPlatelets\r\nAST 1\taspartate transaminase ratio\r\nALT 1\talanine transaminase ratio 1 week\r\nALT 4\talanine transaminase ratio 12 weeks\r\nALT 12\talanine transaminase ratio 4 weeks\r\nALT 24\talanine transaminase ratio 24 weeks\r\nALT 36\talanine transaminase ratio 36 weeks\r\nALT 48\talanine transaminase ratio 48 weeks\r\nALT after 24 w\talanine transaminase ratio 24 weeks\r\nRNA Base\tRNA Base\r\nRNA 4\tRNA 4\r\nRNA 12\tRNA 12\r\nRNA EOT\tRNA end-of-treatment \r\nRNA EF\tRNA Elongation Factor\r\nBaseline histological Grading\tBaseline histological Grading\r\nBaselinehistological staging\tBaselinehistological staging&#39;, &#39;citation&#39;: None}}
-                                name     role         type demographic  \
-0                               Age   Feature      Integer         Age   
-1                             Gender  Feature       Binary      Gender   
-2                                BMI  Feature      Integer        None   
-3                              Fever  Feature       Binary        None   
-4                     Nausea/Vomting  Feature       Binary        None   
-5                          Headache   Feature       Binary        None   
-6                          Diarrhea   Feature       Binary        None   
-7   Fatigue &amp; generalized bone ache   Feature       Binary        None   
-8                          Jaundice   Feature       Binary        None   
-9                   Epigastric pain   Feature       Binary        None   
-10                               WBC  Feature      Integer        None   
-11                               RBC  Feature      Integer        None   
-12                               HGB  Feature      Integer        None   
-13                              Plat  Feature      Integer        None   
-14                             AST 1  Feature      Integer        None   
-15                             ALT 1  Feature      Integer        None   
-16                              ALT4  Feature      Integer        None   
-17                            ALT 12  Feature      Integer        None   
-18                            ALT 24  Feature      Integer        None   
-19                            ALT 36  Feature      Integer        None   
-20                            ALT 48  Feature      Integer        None   
-21                    ALT after 24 w  Feature      Integer        None   
-22                          RNA Base  Feature      Integer        None   
-23                             RNA 4  Feature      Integer        None   
-24                            RNA 12  Feature      Integer        None   
-25                           RNA EOT  Feature      Integer        None   
-26                            RNA EF  Feature      Integer        None   
-27     Baseline histological Grading  Feature  Categorical        None   
-28      Baselinehistological staging   Target  Categorical        None   
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== Evaluasi Model Random Forest ===
+Akurasi      : 0.3249097472924188
+Presisi      : 0.33026739576697106
+Recall       : 0.3249097472924188
+F1 Score     : 0.32054640923122757
 
-                                          description units missing_values  
-0                                                None  None             no  
-1                                    [Male], [Female]  None             no  
-2                                     Body Mass Index  None             no  
-3                                 [Absent], [Present]  None             no  
-4                                 [Absent], [Present]  None             no  
-5                                 [Absent], [Present]  None             no  
-6                                 [Absent], [Present]  None             no  
-7                                 [Absent], [Present]  None             no  
-8                                 [Absent], [Present]  None             no  
-9                                 [Absent], [Present]  None             no  
-10                                  White blood cells  None             no  
-11                                    Red blood cells  None             no  
-12                                         Hemoglobin  None             no  
-13                                          Platelets  None             no  
-14                       aspartate transaminase ratio  None             no  
-15                  alanine transaminase ratio 1 week  None             no  
-16                 alanine transaminase ratio 4 weeks  None             no  
-17                alanine transaminase ratio 12 weeks  None             no  
-18                alanine transaminase ratio 24 weeks  None             no  
-19                alanine transaminase ratio 36 weeks  None             no  
-20                alanine transaminase ratio 48 weeks  None             no  
-21  after 24 warnings alanine transaminase ratio 2...  None             no  
-22                                               None  None             no  
-23                                               None  None             no  
-24                                               None  None             no  
-25                               RNA end-of-treatment  None             no  
-26                              RNA Elongation Factor  None             no  
-27                                               None  None             no  
-28                                               None  None             no  
+=== Contoh X Train ===
+      Age   Gender  BMI  Fever  Nausea/Vomting  Headache   Diarrhea   \
+630     35       2   35      2               2          2          2   
+1155    57       2   24      2               2          1          1   
+948     55       1   30      2               2          1          2   
+944     61       2   23      2               2          1          2   
+701     57       1   29      1               1          2          2   
+
+      Fatigue &amp; generalized bone ache   Jaundice   Epigastric pain   ...  \
+630                                  1          1                 2  ...   
+1155                                 1          2                 2  ...   
+948                                  1          1                 2  ...   
+944                                  1          2                 1  ...   
+701                                  1          1                 2  ...   
+
+      ALT 24  ALT 36  ALT 48  ALT after 24 w  RNA Base    RNA 4  RNA 12  \
+630       72      83     118              34    512261   741805  179888   
+1155      56      99      60              30   1181833   811141  534294   
+948       71      98      62              25   1183216  1039978   69432   
+944       92     116      98              35    176923   548229  439001   
+701       90      60     103              25    649229    83513       5   
+
+      RNA EOT  RNA EF  Baseline histological Grading  
+630    385271   66591                             14  
+1155   285857  260052                              5  
+948    383873  509684                              5  
+944    316184  649875                             11  
+701         5       5                              5  
+
+[5 rows x 28 columns]
+
+=== Contoh X Test ===
+      Age   Gender  BMI  Fever  Nausea/Vomting  Headache   Diarrhea   \
+1128    52       1   23      2               2          2          1   
+237     51       1   30      1               2          1          1   
+163     39       2   29      2               2          2          1   
+739     55       2   35      1               1          2          2   
+51      56       2   23      1               1          1          2   
+
+      Fatigue &amp; generalized bone ache   Jaundice   Epigastric pain   ...  \
+1128                                 1          2                 1  ...   
+237                                  1          1                 1  ...   
+163                                  1          1                 1  ...   
+739                                  2          2                 1  ...   
+51                                   2          2                 2  ...   
+
+      ALT 24  ALT 36  ALT 48  ALT after 24 w  RNA Base    RNA 4  RNA 12  \
+1128      85      80      55              40    326964   634114       5   
+237       46     124      47              44   1128295   722676       5   
+163       60      53      84              28     87557   139368   47678   
+739       47     114      84              45     49315  1070974       5   
+51        80      76     101              43    508849   130739   43228   
+
+      RNA EOT  RNA EF  Baseline histological Grading  
+1128        5       5                             12  
+237         5       5                              5  
+163    697035   26909                              8  
+739         5       5                             11  
+51     300616   92124                             13  
+
+[5 rows x 28 columns]
+
+=== Y Test Asli ===
+1128    3
+237     4
+163     3
+739     2
+51      2
+Name: Baselinehistological staging, dtype: int64
+
+=== Y Prediksi ===
+0    4
+1    4
+2    1
+3    2
+4    2
+dtype: int64
 </pre></div>
 </div>
 </div>
 </div>
+</section>
 </section>
 <section id="data-understanding">
 <h2>2. Data Understanding<a class="headerlink" href="#data-understanding" title="Link to this heading">#</a></h2>
@@ -1012,98 +1092,249 @@ Contoh hasil encoding:
 </section>
 <section id="klasifikasi-terhadap-data">
 <h2>4. klasifikasi terhadap data<a class="headerlink" href="#klasifikasi-terhadap-data" title="Link to this heading">#</a></h2>
-<p>Kode di bawah melakukan klasifikasi terhadap dataset Hepatitis C Virus for Egyptian Patients menggunakan empat model machine learning: Decision Tree, Naive Bayes, Random Forest, dan K-Nearest Neighbors (KNN). Langkah awal melibatkan proses preprocessing, yaitu normalisasi data numerik menggunakan MinMaxScaler agar semua nilai fitur berada pada skala yang sama, serta encoding pada kolom Gender dan target Baselinehistological staging agar dapat digunakan oleh algoritma klasifikasi. Setelah data diproses, dilakukan pembagian ke dalam data latih dan data uji dengan proporsi 80:20.</p>
-<p>Setelah itu, setiap model dilatih menggunakan data latih (X_train, y_train) dan kemudian digunakan untuk memprediksi label pada data uji (X_test). Namun, berbeda dari evaluasi model pada umumnya, kode ini tidak menghitung akurasi atau metrik evaluasi lainnya. Sebaliknya, kode hanya mencetak 10 hasil prediksi pertama dari masing-masing model dan membandingkannya secara langsung dengan label asli. Pendekatan ini berguna jika tujuan utamanya adalah sekadar melihat pola atau output dari setiap model sebelum dilakukan evaluasi formal.</p>
+<p>Kode di bawah digunakan untuk memuat dan memproses dataset dari UCI Machine Learning Repository dengan ID 503, kemudian mengimplementasikan dan membandingkan tiga model klasifikasi: Gaussian Naive Bayes, Decision Tree, dan K-Nearest Neighbors (KNN). Dataset yang digunakan memiliki target ‘Baselinehistological staging’, yang dikonversi menjadi label biner: nilai 1 dan 2 diklasifikasikan sebagai 0 (misalnya kondisi ringan), dan nilai 3 serta 4 sebagai 1 (misalnya kondisi berat). Data kemudian dipisahkan menjadi fitur (X) dan label (y), dan semua nilai kosong pada fitur diimputasi menggunakan rata-rata (mean) agar model tidak gagal saat pelatihan.</p>
+<p>Selanjutnya, data dibagi menjadi dua bagian: 80% untuk pelatihan (training) dan 20% untuk pengujian (testing). Karena model Gaussian Naive Bayes dan KNN sensitif terhadap skala data, fitur-fitur tersebut dinormalisasi menggunakan MinMaxScaler agar semua nilai berada dalam rentang 0 hingga 1. Model Decision Tree tidak memerlukan normalisasi karena berbasis pada pemisahan nilai, bukan perhitungan jarak atau probabilitas. Setelah pelatihan selesai untuk ketiga model, prediksi hasil dari masing-masing model ditampilkan, bersama dengan data pelatihan, data pengujian, dan label pengujian.</p>
+<p>Secara keseluruhan, kode ini berguna untuk membandingkan performa awal ketiga model klasifikasi terhadap dataset biner yang telah diproses. Meskipun belum ditambahkan metrik evaluasi seperti akurasi, precision, recall, atau confusion matrix, struktur kode ini sudah mempersiapkan seluruh pipeline dari pengambilan data, preprocessing, pelatihan, hingga prediksi. Langkah selanjutnya yang disarankan adalah menambahkan evaluasi performa agar bisa menilai model mana yang paling cocok untuk digunakan dalam konteks ini.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span><span class="p">,</span> <span class="n">MinMaxScaler</span>
+<span class="kn">from</span> <span class="nn">ucimlrepo</span> <span class="kn">import</span> <span class="n">fetch_ucirepo</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">classification_report</span>
-
-<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
 <span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
 <span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
 
-<span class="kn">from</span> <span class="nn">ucimlrepo</span> <span class="kn">import</span> <span class="n">fetch_ucirepo</span>
-
-<span class="c1"># -----------------------------</span>
-<span class="c1"># 1. Ambil dan preprocessing data</span>
-<span class="c1"># -----------------------------</span>
+<span class="c1"># Ambil dataset</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">fetch_ucirepo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">503</span><span class="p">)</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">features</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">targets</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">targets</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># Normalisasi fitur numerik</span>
-<span class="n">numeric_cols</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;number&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span>
-<span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
-<span class="n">X_scaled</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">X_scaled</span><span class="p">[</span><span class="n">numeric_cols</span><span class="p">]</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">[</span><span class="n">numeric_cols</span><span class="p">])</span>
-
-<span class="c1"># Encoding Gender</span>
-<span class="n">X_encoded</span> <span class="o">=</span> <span class="n">X_scaled</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="k">if</span> <span class="s1">&#39;Gender&#39;</span> <span class="ow">in</span> <span class="n">X_encoded</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
-    <span class="n">le_gender</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
-    <span class="n">X_encoded</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le_gender</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_encoded</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">])</span>
-
-<span class="c1"># Encoding target</span>
+<span class="c1"># Pilih target dan ubah jadi biner: 1–2 =&gt; 0, 3–4 =&gt; 1</span>
 <span class="n">target_col</span> <span class="o">=</span> <span class="s1">&#39;Baselinehistological staging&#39;</span>
-<span class="n">le_target</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
-<span class="n">y_encoded</span> <span class="o">=</span> <span class="n">le_target</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">target_col</span><span class="p">])</span>
-<span class="n">target_labels</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">label</span><span class="p">)</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">le_target</span><span class="o">.</span><span class="n">classes_</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="n">target_col</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+
+<span class="c1"># Pisahkan fitur dan label</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">target_col</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span>
+
+<span class="c1"># Imputasi nilai kosong</span>
+<span class="n">imputer</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
+<span class="n">X_imputed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">imputer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 
 <span class="c1"># Split data</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_encoded</span><span class="p">,</span> <span class="n">y_encoded</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X_imputed</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+<span class="p">)</span>
 
-<span class="c1"># -----------------------------</span>
-<span class="c1"># 2. Daftar Model Klasifikasi</span>
-<span class="c1"># -----------------------------</span>
-<span class="n">models</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;Decision Tree&quot;</span><span class="p">:</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
-    <span class="s2">&quot;Naive Bayes&quot;</span><span class="p">:</span> <span class="n">GaussianNB</span><span class="p">(),</span>
-    <span class="s2">&quot;Random Forest&quot;</span><span class="p">:</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
-    <span class="s2">&quot;KNN (k=5)&quot;</span><span class="p">:</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="p">}</span>
+<span class="c1"># Gunakan MinMaxScaler untuk model Naive Bayes &amp; KNN</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+<span class="n">X_train_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 
-<span class="c1"># -----------------------------</span>
-<span class="c1"># 3. Jalankan model &amp; tampilkan prediksi (tanpa evaluasi)</span>
-<span class="c1"># -----------------------------</span>
-<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Model: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># ============ 1. Gaussian Naive Bayes ============</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">==&gt; Melatih model: Gaussian Naive Bayes&quot;</span><span class="p">)</span>
+<span class="n">gnb_model</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">gnb_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_gnb</span> <span class="o">=</span> <span class="n">gnb_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
 
-    <span class="c1"># Latih model</span>
-    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="c1"># ============ 2. Decision Tree ============</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">==&gt; Melatih model: Decision Tree&quot;</span><span class="p">)</span>
+<span class="n">dt_model</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">dt_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_dt</span> <span class="o">=</span> <span class="n">dt_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 
-    <span class="c1"># Prediksi</span>
-    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="c1"># ============ 3. K-Nearest Neighbors ============</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">==&gt; Melatih model: K-Nearest Neighbors&quot;</span><span class="p">)</span>
+<span class="n">knn_model</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">knn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_knn</span> <span class="o">=</span> <span class="n">knn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
 
-    <span class="c1"># Tampilkan hanya 10 hasil prediksi pertama</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Contoh hasil prediksi:&quot;</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Contoh label asli    :&quot;</span><span class="p">,</span> <span class="n">y_test</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+<span class="c1"># ================================</span>
+<span class="c1"># Tampilkan Hasil</span>
+<span class="c1"># ================================</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">================ Y PREDIKSI (Naive Bayes) =================&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_pred_gnb</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">================ Y PREDIKSI (Decision Tree) ================&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_pred_dt</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">================ Y PREDIKSI (KNN) ==========================&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_pred_knn</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">==================== X TRAINING ============================&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">==================== X TESTING =============================&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">==================== Y TESTING =============================&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_test</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==================================================
-Model: Decision Tree
-Contoh hasil prediksi: [1 2 2 3 1 2 1 0 3 0]
-Contoh label asli    : [2, 3, 2, 1, 1, 0, 3, 3, 1, 0]
-==================================================
-Model: Naive Bayes
-Contoh hasil prediksi: [3 3 2 1 0 3 2 3 2 2]
-Contoh label asli    : [2, 3, 2, 1, 1, 0, 3, 3, 1, 0]
-==================================================
-Model: Random Forest
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==&gt; Melatih model: Gaussian Naive Bayes
+
+==&gt; Melatih model: Decision Tree
+
+==&gt; Melatih model: K-Nearest Neighbors
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Contoh hasil prediksi: [3 3 0 1 1 3 2 2 2 2]
-Contoh label asli    : [2, 3, 2, 1, 1, 0, 3, 3, 1, 0]
-==================================================
-Model: KNN (k=5)
-Contoh hasil prediksi: [1 0 1 1 0 0 3 1 1 0]
-Contoh label asli    : [2, 3, 2, 1, 1, 0, 3, 3, 1, 0]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>================ Y PREDIKSI (Naive Bayes) =================
+[1 1 1 0 0 1 1 1 1 0 1 1 1 1 1 0 1 0 1 0 1 1 1 1 0 1 0 0 1 0 1 0 1 0 0 1 1
+ 1 1 1 1 1 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 1 1 1 1 0 0 0 0 1 1 1 1 0 1 1 1
+ 1 1 0 1 1 1 0 1 1 0 1 0 1 0 0 0 0 1 1 0 0 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 1
+ 0 1 0 1 1 1 0 1 1 1 1 1 0 0 1 0 1 0 1 1 1 0 1 0 1 0 0 0 1 1 0 0 1 0 1 1 1
+ 1 0 0 0 0 1 0 0 1 0 1 1 1 1 0 1 0 1 1 0 0 1 1 0 1 1 1 1 0 1 1 1 0 1 1 0 0
+ 1 0 0 1 1 0 1 1 0 1 0 0 0 1 1 1 0 1 0 1 0 1 1 0 1 0 1 0 0 1 0 0 1 1 0 1 1
+ 1 1 1 1 1 1 0 1 0 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1
+ 1 0 1 1 1 1 1 1 0 0 0 1 1 1 0 0 0 1]
+
+================ Y PREDIKSI (Decision Tree) ================
+[0 1 1 0 0 1 1 1 0 1 1 1 1 1 1 0 0 0 1 1 1 0 0 0 0 0 0 1 0 1 0 1 0 0 1 1 1
+ 1 1 1 0 1 0 1 0 1 1 1 0 0 1 1 0 0 1 0 1 0 1 1 1 0 1 0 1 0 1 1 0 1 0 1 1 1
+ 1 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 1 0 1 0 1 0 0 1 1 1 0 1 1
+ 1 0 0 0 1 1 0 0 0 1 1 0 1 0 0 1 1 0 0 1 0 1 1 1 0 1 1 0 1 0 1 0 0 1 0 0 1
+ 1 1 0 0 1 1 0 1 0 0 0 1 1 1 0 0 1 1 0 0 0 1 0 1 1 0 0 0 1 1 0 1 1 0 0 0 0
+ 0 1 0 0 1 0 0 1 1 0 0 1 1 1 0 1 0 1 1 1 1 1 1 0 0 1 1 0 0 0 0 1 0 1 0 1 1
+ 0 1 0 1 1 1 1 1 0 0 1 0 1 0 0 0 0 0 0 1 1 1 1 0 0 0 1 1 1 1 0 1 1 1 0 1 1
+ 1 0 0 1 1 1 1 1 1 1 1 0 1 1 1 1 0 0]
+
+================ Y PREDIKSI (KNN) ==========================
+[0 1 1 0 0 0 1 1 0 0 0 0 1 0 1 1 0 1 1 0 0 1 0 1 1 1 1 1 0 0 1 1 1 1 0 0 0
+ 0 0 1 0 1 0 0 1 1 1 1 1 0 0 1 1 0 0 1 0 0 1 1 1 1 0 0 0 0 0 0 1 0 1 1 0 0
+ 1 0 1 0 0 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 0 1 0 0 1 1 0 1 1 0 0 1 0 0 0 0 1
+ 1 1 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 0 1 0 0 1 0 0 1 0 1 1 1 0 0 1 0 1 0 1
+ 0 0 0 1 0 1 1 0 1 1 1 1 1 1 0 1 0 0 1 0 1 0 1 1 0 0 1 0 1 0 1 1 0 0 0 0 0
+ 0 0 1 0 1 0 1 1 1 1 1 0 0 0 1 1 1 1 0 1 0 1 1 1 1 0 1 1 0 1 0 1 1 1 0 1 1
+ 1 0 1 0 1 1 0 1 0 0 1 1 1 0 0 1 1 1 1 0 0 1 1 1 1 0 1 1 1 1 1 1 1 0 1 0 1
+ 0 1 1 0 0 1 1 1 0 0 1 1 1 1 0 0 1 0]
+
+==================== X TRAINING ============================
+      Age   Gender   BMI  Fever  Nausea/Vomting  Headache   Diarrhea   \
+630   35.0     2.0  35.0    2.0             2.0        2.0        2.0   
+1155  57.0     2.0  24.0    2.0             2.0        1.0        1.0   
+948   55.0     1.0  30.0    2.0             2.0        1.0        2.0   
+944   61.0     2.0  23.0    2.0             2.0        1.0        2.0   
+701   57.0     1.0  29.0    1.0             1.0        2.0        2.0   
+...    ...     ...   ...    ...             ...        ...        ...   
+1095  61.0     2.0  22.0    2.0             1.0        1.0        1.0   
+1130  42.0     2.0  32.0    2.0             1.0        1.0        2.0   
+1294  42.0     1.0  28.0    2.0             2.0        2.0        1.0   
+860   52.0     2.0  28.0    2.0             2.0        2.0        1.0   
+1126  51.0     1.0  35.0    2.0             1.0        2.0        1.0   
+
+      Fatigue &amp; generalized bone ache   Jaundice   Epigastric pain   ...  \
+630                                1.0        1.0               2.0  ...   
+1155                               1.0        2.0               2.0  ...   
+948                                1.0        1.0               2.0  ...   
+944                                1.0        2.0               1.0  ...   
+701                                1.0        1.0               2.0  ...   
+...                                ...        ...               ...  ...   
+1095                               2.0        1.0               1.0  ...   
+1130                               2.0        2.0               1.0  ...   
+1294                               1.0        2.0               2.0  ...   
+860                                2.0        1.0               2.0  ...   
+1126                               2.0        1.0               1.0  ...   
+
+      ALT 24  ALT 36  ALT 48  ALT after 24 w   RNA Base      RNA 4    RNA 12  \
+630     72.0    83.0   118.0            34.0   512261.0   741805.0  179888.0   
+1155    56.0    99.0    60.0            30.0  1181833.0   811141.0  534294.0   
+948     71.0    98.0    62.0            25.0  1183216.0  1039978.0   69432.0   
+944     92.0   116.0    98.0            35.0   176923.0   548229.0  439001.0   
+701     90.0    60.0   103.0            25.0   649229.0    83513.0       5.0   
+...      ...     ...     ...             ...        ...        ...       ...   
+1095    62.0    80.0   123.0            30.0   650378.0   439562.0    9515.0   
+1130    64.0    94.0    77.0            38.0   959371.0   600996.0  493891.0   
+1294    49.0   105.0    95.0            25.0   868864.0    36800.0       5.0   
+860     57.0   113.0    59.0            39.0  1043824.0   185319.0       5.0   
+1126    53.0    73.0   117.0            23.0   762174.0   924007.0  433768.0   
+
+       RNA EOT    RNA EF  Baseline histological Grading  
+630   385271.0   66591.0                           14.0  
+1155  285857.0  260052.0                            5.0  
+948   383873.0  509684.0                            5.0  
+944   316184.0  649875.0                           11.0  
+701        5.0       5.0                            5.0  
+...        ...       ...                            ...  
+1095  242881.0  176382.0                           12.0  
+1130  295664.0  759722.0                            8.0  
+1294       5.0       5.0                            9.0  
+860        5.0       5.0                           14.0  
+1126  315163.0  516650.0                            6.0  
+
+[1108 rows x 28 columns]
+
+==================== X TESTING =============================
+      Age   Gender   BMI  Fever  Nausea/Vomting  Headache   Diarrhea   \
+1128  52.0     1.0  23.0    2.0             2.0        2.0        1.0   
+237   51.0     1.0  30.0    1.0             2.0        1.0        1.0   
+163   39.0     2.0  29.0    2.0             2.0        2.0        1.0   
+739   55.0     2.0  35.0    1.0             1.0        2.0        2.0   
+51    56.0     2.0  23.0    1.0             1.0        1.0        2.0   
+...    ...     ...   ...    ...             ...        ...        ...   
+289   46.0     2.0  28.0    1.0             1.0        1.0        1.0   
+693   55.0     1.0  31.0    2.0             1.0        2.0        2.0   
+462   43.0     1.0  24.0    2.0             2.0        1.0        1.0   
+945   46.0     1.0  32.0    2.0             2.0        1.0        1.0   
+969   41.0     1.0  32.0    2.0             2.0        2.0        2.0   
+
+      Fatigue &amp; generalized bone ache   Jaundice   Epigastric pain   ...  \
+1128                               1.0        2.0               1.0  ...   
+237                                1.0        1.0               1.0  ...   
+163                                1.0        1.0               1.0  ...   
+739                                2.0        2.0               1.0  ...   
+51                                 2.0        2.0               2.0  ...   
+...                                ...        ...               ...  ...   
+289                                2.0        1.0               1.0  ...   
+693                                1.0        1.0               2.0  ...   
+462                                1.0        2.0               2.0  ...   
+945                                2.0        1.0               2.0  ...   
+969                                1.0        1.0               2.0  ...   
+
+      ALT 24  ALT 36  ALT 48  ALT after 24 w   RNA Base      RNA 4    RNA 12  \
+1128    85.0    80.0    55.0            40.0   326964.0   634114.0       5.0   
+237     46.0   124.0    47.0            44.0  1128295.0   722676.0       5.0   
+163     60.0    53.0    84.0            28.0    87557.0   139368.0   47678.0   
+739     47.0   114.0    84.0            45.0    49315.0  1070974.0       5.0   
+51      80.0    76.0   101.0            43.0   508849.0   130739.0   43228.0   
+...      ...     ...     ...             ...        ...        ...       ...   
+289     97.0   116.0   106.0            23.0   356961.0   417593.0  274776.0   
+693     98.0   102.0   100.0            35.0   267632.0   404984.0       5.0   
+462    106.0    86.0    43.0            26.0   269253.0  1008630.0       5.0   
+945    127.0   103.0    97.0            35.0   235213.0   166819.0       5.0   
+969     82.0    95.0    60.0            43.0   837024.0   471355.0  454301.0   
+
+       RNA EOT    RNA EF  Baseline histological Grading  
+1128       5.0       5.0                           12.0  
+237        5.0       5.0                            5.0  
+163   697035.0   26909.0                            8.0  
+739        5.0       5.0                           11.0  
+51    300616.0   92124.0                           13.0  
+...        ...       ...                            ...  
+289   600159.0  781340.0                           14.0  
+693        5.0       5.0                            3.0  
+462        5.0       5.0                           15.0  
+945        5.0       5.0                            3.0  
+969   431075.0  533187.0                           15.0  
+
+[277 rows x 28 columns]
+
+==================== Y TESTING =============================
+0      1
+1      1
+2      1
+3      0
+4      0
+      ..
+272    1
+273    0
+274    0
+275    0
+276    1
+Name: Baselinehistological staging, Length: 277, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -1114,138 +1345,250 @@ Contoh label asli    : [2, 3, 2, 1, 1, 0, 3, 3, 1, 0]
 <p>Setelah semua model dievaluasi, sistem akan menentukan model dengan akurasi tertinggi menggunakan fungsi max(). Hasil akhirnya akan mencetak nama model terbaik beserta nilai akurasinya secara rinci. Dengan pendekatan ini, kamu dapat langsung mengetahui algoritma mana yang paling baik performanya dalam mengklasifikasikan staging penyakit hepatitis berdasarkan data pasien.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">ucimlrepo</span> <span class="kn">import</span> <span class="n">fetch_ucirepo</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span><span class="p">,</span> <span class="n">confusion_matrix</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 
-<span class="c1"># Simpan akurasi setiap model</span>
-<span class="n">model_scores</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="c1"># Ambil dataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">fetch_ucirepo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">503</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">targets</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Model: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Pilih target dan ubah jadi biner: 1–2 =&gt; 0, 3–4 =&gt; 1</span>
+<span class="n">target_col</span> <span class="o">=</span> <span class="s1">&#39;Baselinehistological staging&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="n">target_col</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
 
-    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="c1"># Pisahkan fitur dan label</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">target_col</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span>
 
-    <span class="n">acc</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-    <span class="n">model_scores</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">acc</span>
+<span class="c1"># Imputasi nilai kosong</span>
+<span class="n">imputer</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
+<span class="n">X_imputed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">imputer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Akurasi:&quot;</span><span class="p">,</span> <span class="n">acc</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Confusion Matrix:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Classification Report:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">target_labels</span><span class="p">))</span>
+<span class="c1"># Split data</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X_imputed</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+<span class="p">)</span>
 
-    <span class="c1"># Visualisasi Confusion Matrix</span>
-    <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Blues&quot;</span><span class="p">,</span>
-                <span class="n">xticklabels</span><span class="o">=</span><span class="n">target_labels</span><span class="p">,</span>
-                <span class="n">yticklabels</span><span class="o">=</span><span class="n">target_labels</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Confusion Matrix: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Predicted Label&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;True Label&quot;</span><span class="p">)</span>
+<span class="c1"># Gunakan MinMaxScaler untuk model Naive Bayes &amp; KNN</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+<span class="n">X_train_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># ===== MODEL 1: Gaussian Naive Bayes =====</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">==&gt; Melatih model: Gaussian Naive Bayes&quot;</span><span class="p">)</span>
+<span class="n">gnb_model</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">gnb_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_gnb</span> <span class="o">=</span> <span class="n">gnb_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
+
+<span class="c1"># ===== MODEL 2: Decision Tree =====</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">==&gt; Melatih model: Decision Tree&quot;</span><span class="p">)</span>
+<span class="n">dt_model</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">dt_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_dt</span> <span class="o">=</span> <span class="n">dt_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># ===== MODEL 3: K-Nearest Neighbors =====</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">==&gt; Melatih model: K-Nearest Neighbors (k=5)&quot;</span><span class="p">)</span>
+<span class="n">knn_model</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">knn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_knn</span> <span class="o">=</span> <span class="n">knn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
+
+<span class="c1"># ===== FUNGSI EVALUASI + VISUALISASI =====</span>
+<span class="k">def</span> <span class="nf">evaluate_model</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">======= Evaluasi Model: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> =======&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Akurasi  :&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Presisi  :&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recall   :&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">recall_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;F1 Score :&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span> <span class="mi">4</span><span class="p">))</span>
+
+    <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Confusion Matrix - </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Predicted&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Actual&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="c1"># Tampilkan model dengan akurasi tertinggi</span>
-<span class="n">best_model</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">model_scores</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">model_scores</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Model dengan akurasi tertinggi:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">best_model</span><span class="si">}</span><span class="s2"> dengan akurasi </span><span class="si">{</span><span class="n">model_scores</span><span class="p">[</span><span class="n">best_model</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># ===== PANGGIL EVALUASI SETIAP MODEL =====</span>
+<span class="n">evaluate_model</span><span class="p">(</span><span class="s2">&quot;Gaussian Naive Bayes&quot;</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_gnb</span><span class="p">)</span>
+<span class="n">evaluate_model</span><span class="p">(</span><span class="s2">&quot;Decision Tree&quot;</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_dt</span><span class="p">)</span>
+<span class="n">evaluate_model</span><span class="p">(</span><span class="s2">&quot;K-Nearest Neighbors (k=5)&quot;</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_knn</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>========================================
-Model: Decision Tree
-Akurasi: 0.26353790613718414
-Confusion Matrix:
- [[18 12 14 22]
- [17 19 15 22]
- [15 16 19 14]
- [20 19 18 17]]
-Classification Report:
-               precision    recall  f1-score   support
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==&gt; Melatih model: Gaussian Naive Bayes
 
-           1       0.26      0.27      0.26        66
-           2       0.29      0.26      0.27        73
-           3       0.29      0.30      0.29        64
-           4       0.23      0.23      0.23        74
+==&gt; Melatih model: Decision Tree
 
-    accuracy                           0.26       277
-   macro avg       0.26      0.26      0.26       277
-weighted avg       0.26      0.26      0.26       277
+==&gt; Melatih model: K-Nearest Neighbors (k=5)
+
+======= Evaluasi Model: Gaussian Naive Bayes =======
+Akurasi  : 0.5271
+Presisi  : 0.5202
+Recall   : 0.6522
+F1 Score : 0.5788
 </pre></div>
 </div>
-<img alt="_images/969a71b929be645a3cf30908ff0ee8a915246aa7ea8a5eb199917d8d7eeba981.png" src="_images/969a71b929be645a3cf30908ff0ee8a915246aa7ea8a5eb199917d8d7eeba981.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>========================================
-Model: Naive Bayes
-Akurasi: 0.33212996389891697
-Confusion Matrix:
- [[14 13 19 20]
- [ 6 22 21 24]
- [15 10 24 15]
- [14  6 22 32]]
-Classification Report:
-               precision    recall  f1-score   support
-
-           1       0.29      0.21      0.24        66
-           2       0.43      0.30      0.35        73
-           3       0.28      0.38      0.32        64
-           4       0.35      0.43      0.39        74
-
-    accuracy                           0.33       277
-   macro avg       0.34      0.33      0.33       277
-weighted avg       0.34      0.33      0.33       277
+<img alt="_images/ec5f912390be105edf10f5389ad7a43b5bad76594fff9c2d8b4f086d8f88f471.png" src="_images/ec5f912390be105edf10f5389ad7a43b5bad76594fff9c2d8b4f086d8f88f471.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>======= Evaluasi Model: Decision Tree =======
+Akurasi  : 0.4729
+Presisi  : 0.473
+Recall   : 0.5072
+F1 Score : 0.4895
 </pre></div>
 </div>
-<img alt="_images/97044824af8bb49c804ee8af2dccb44b5cc8670b04cfb8c372fe5fac7e1058ea.png" src="_images/97044824af8bb49c804ee8af2dccb44b5cc8670b04cfb8c372fe5fac7e1058ea.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>========================================
-Model: Random Forest
+<img alt="_images/02edf212e301026424a1cbde334413bbffff2100bacc4ad688457a5d2dfe95a2.png" src="_images/02edf212e301026424a1cbde334413bbffff2100bacc4ad688457a5d2dfe95a2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>======= Evaluasi Model: K-Nearest Neighbors (k=5) =======
+Akurasi  : 0.5668
+Presisi  : 0.5592
+Recall   : 0.6159
+F1 Score : 0.5862
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Akurasi: 0.3176895306859206
-Confusion Matrix:
- [[15 15 13 23]
- [21 17 23 12]
- [13  7 26 18]
- [ 6 10 28 30]]
-Classification Report:
-               precision    recall  f1-score   support
+<img alt="_images/7c7cd26914c2afedb36e03f220f2f0f155b2eea806d44c136737d3929b43762a.png" src="_images/7c7cd26914c2afedb36e03f220f2f0f155b2eea806d44c136737d3929b43762a.png" />
+</div>
+</div>
+<p>Kode di bawah melakukan proses end-to-end machine learning pipeline untuk mengklasifikasikan stadium histologis berdasarkan dataset dari UCI dengan ID 503. Dataset tersebut dibersihkan dengan membuang entri yang memiliki nilai target kosong dan mengonversi target ‘Baselinehistological staging’ menjadi dua kelas biner: nilai 1 dan 2 menjadi 0, serta 3 dan 4 menjadi 1. Setelah itu, semua fitur yang mengandung nilai kosong diimputasi menggunakan nilai rata-rata (mean imputation), kemudian dibagi menjadi data pelatihan dan pengujian. Untuk model yang sensitif terhadap skala data (Naive Bayes dan KNN), dilakukan normalisasi menggunakan MinMaxScaler.</p>
+<p>Tiga model pembelajaran mesin yang digunakan adalah Gaussian Naive Bayes, Decision Tree, dan K-Nearest Neighbors. Hasil prediksi dari masing-masing model dievaluasi menggunakan metrik umum: accuracy, precision, recall, dan F1-score. Semua hasil diekstrak ke dalam DataFrame dan diurutkan berdasarkan nilai F1-score, kemudian divisualisasikan menggunakan barplot yang menunjukkan nilai F1 setiap model lengkap dengan label angkanya di atas bar. Di akhir, program juga menyebutkan model terbaik berdasarkan skor F1 tertinggi, memberikan gambaran jelas model mana yang paling efektif untuk tugas klasifikasi biner pada dataset tersebut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">ucimlrepo</span> <span class="kn">import</span> <span class="n">fetch_ucirepo</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 
-           1       0.27      0.23      0.25        66
-           2       0.35      0.23      0.28        73
-           3       0.29      0.41      0.34        64
-           4       0.36      0.41      0.38        74
+<span class="c1"># ===================== Ambil dan siapkan dataset =====================</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">fetch_ucirepo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">503</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">targets</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-    accuracy                           0.32       277
-   macro avg       0.32      0.32      0.31       277
-weighted avg       0.32      0.32      0.31       277
+<span class="n">target_col</span> <span class="o">=</span> <span class="s1">&#39;Baselinehistological staging&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="n">target_col</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">target_col</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span>
+
+<span class="n">imputer</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
+<span class="n">X_imputed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">imputer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X_imputed</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+<span class="p">)</span>
+
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+<span class="n">X_train_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># ===================== Training Model =====================</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">==&gt; Melatih model: Gaussian Naive Bayes&quot;</span><span class="p">)</span>
+<span class="n">gnb_model</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">gnb_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_gnb</span> <span class="o">=</span> <span class="n">gnb_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">==&gt; Melatih model: Decision Tree&quot;</span><span class="p">)</span>
+<span class="n">dt_model</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">dt_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_dt</span> <span class="o">=</span> <span class="n">dt_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">==&gt; Melatih model: K-Nearest Neighbors&quot;</span><span class="p">)</span>
+<span class="n">knn_model</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">knn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_knn</span> <span class="o">=</span> <span class="n">knn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
+
+<span class="c1"># ===================== Evaluasi dan Visualisasi =====================</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Gaussian Naive Bayes&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;accuracy&quot;</span><span class="p">:</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_gnb</span><span class="p">),</span>
+        <span class="s2">&quot;precision&quot;</span><span class="p">:</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_gnb</span><span class="p">),</span>
+        <span class="s2">&quot;recall&quot;</span><span class="p">:</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_gnb</span><span class="p">),</span>
+        <span class="s2">&quot;f1&quot;</span><span class="p">:</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_gnb</span><span class="p">)</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;Decision Tree&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;accuracy&quot;</span><span class="p">:</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_dt</span><span class="p">),</span>
+        <span class="s2">&quot;precision&quot;</span><span class="p">:</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_dt</span><span class="p">),</span>
+        <span class="s2">&quot;recall&quot;</span><span class="p">:</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_dt</span><span class="p">),</span>
+        <span class="s2">&quot;f1&quot;</span><span class="p">:</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_dt</span><span class="p">)</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;K-Nearest Neighbors (k=5)&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;accuracy&quot;</span><span class="p">:</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_knn</span><span class="p">),</span>
+        <span class="s2">&quot;precision&quot;</span><span class="p">:</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_knn</span><span class="p">),</span>
+        <span class="s2">&quot;recall&quot;</span><span class="p">:</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_knn</span><span class="p">),</span>
+        <span class="s2">&quot;f1&quot;</span><span class="p">:</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_knn</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">df_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+<span class="n">df_results_sorted</span> <span class="o">=</span> <span class="n">df_results</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;f1&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">========== PERBANDINGAN MODEL BERDASARKAN METRIK ==========&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_results_sorted</span><span class="p">)</span>
+
+<span class="c1"># ===== Barplot F1 Score tanpa warning + label =====</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">df_results_sorted</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">df_results_sorted</span><span class="p">[</span><span class="s2">&quot;f1&quot;</span><span class="p">],</span>
+    <span class="n">hue</span><span class="o">=</span><span class="n">df_results_sorted</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">,</span>
+    <span class="n">dodge</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Perbandingan F1-Score dari Setiap Model&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;F1 Score&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># Tambahkan label skor di atas bar</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">patches</span><span class="p">:</span>
+    <span class="n">f1_val</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">f1_val</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="n">f1_val</span><span class="p">),</span>
+                <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span>
+                <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># ===== Model terbaik berdasarkan F1 =====</span>
+<span class="n">best_model</span> <span class="o">=</span> <span class="n">df_results_sorted</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&gt;&gt; Model terbaik berdasarkan F1-Score adalah: **</span><span class="si">{</span><span class="n">best_model</span><span class="si">}</span><span class="s2">**&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="_images/6a05f78fde96f41785b4bf38db6216a6c932a2514ba9dc44f059dc6b65d7ae31.png" src="_images/6a05f78fde96f41785b4bf38db6216a6c932a2514ba9dc44f059dc6b65d7ae31.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>========================================
-Model: KNN (k=5)
-Akurasi: 0.2815884476534296
-Confusion Matrix:
- [[23 17 11 15]
- [23 20 16 14]
- [20 16 18 10]
- [28 15 14 17]]
-Classification Report:
-               precision    recall  f1-score   support
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==&gt; Melatih model: Gaussian Naive Bayes
 
-           1       0.24      0.35      0.29        66
-           2       0.29      0.27      0.28        73
-           3       0.31      0.28      0.29        64
-           4       0.30      0.23      0.26        74
+==&gt; Melatih model: Decision Tree
 
-    accuracy                           0.28       277
-   macro avg       0.29      0.28      0.28       277
-weighted avg       0.29      0.28      0.28       277
+==&gt; Melatih model: K-Nearest Neighbors
+
+========== PERBANDINGAN MODEL BERDASARKAN METRIK ==========
+                           accuracy  precision    recall        f1
+K-Nearest Neighbors (k=5)  0.566787   0.559211  0.615942  0.586207
+Gaussian Naive Bayes       0.527076   0.520231  0.652174  0.578778
+Decision Tree              0.472924   0.472973  0.507246  0.489510
 </pre></div>
 </div>
-<img alt="_images/2c2c30c6327f6129aff784afc38e4ad956230abe8742c5f492bbec389cd392d7.png" src="_images/2c2c30c6327f6129aff784afc38e4ad956230abe8742c5f492bbec389cd392d7.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model dengan akurasi tertinggi:
-Naive Bayes dengan akurasi 0.3321
+<img alt="_images/5c10b31d8361ad80a97f3f03b91024b21d89dfc0467884d2387803de3c83b9a1.png" src="_images/5c10b31d8361ad80a97f3f03b91024b21d89dfc0467884d2387803de3c83b9a1.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt;&gt; Model terbaik berdasarkan F1-Score adalah: **K-Nearest Neighbors (k=5)**
 </pre></div>
 </div>
 </div>
@@ -1310,7 +1653,10 @@ Naive Bayes dengan akurasi 0.3321
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapkan-dataset">1. Persiapkan Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapkan-dataset">1. Persiapkan Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sumber-dataset">Sumber Dataset</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-understanding">2. Data Understanding</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-penjelasan-fitur-variabel-data">a. Penjelasan fitur / variabel data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-ekplorasi-data-tersebut">b.	Ekplorasi data tersebut</a></li>
